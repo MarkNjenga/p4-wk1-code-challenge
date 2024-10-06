@@ -71,7 +71,6 @@ def update_power(id):
 
     data = request.get_json()
 
-    # Validate description length
     if 'description' in data:
         if len(data['description']) < 20:
             return jsonify({"errors": ["validation errors"]}), 400
@@ -88,7 +87,6 @@ def update_power(id):
 def create_hero_power():
     data = request.get_json()
 
-    # Check for required fields
     strength = data.get('strength')
     if strength not in ['Strong', 'Weak', 'Average']:
         return jsonify({"errors": ["validation errors"]}), 400
