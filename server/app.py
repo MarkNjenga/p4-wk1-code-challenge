@@ -14,6 +14,10 @@ app.json.compact = False
 
 migrate = Migrate(app, db)
 db.init_app(app)
+## Routes
+@app.route('/')
+def index():
+    return '<h1>Code challenge</h1>'
 
 @app.route('/heroes', methods=['GET'])
 def get_heroes():
@@ -116,9 +120,6 @@ def create_hero_power():
         }
     }), 200
 
-@app.route('/')
-def index():
-    return '<h1>Code challenge</h1>'
 
 if __name__ == '__main__':
     app.run(port=5555, debug=True)

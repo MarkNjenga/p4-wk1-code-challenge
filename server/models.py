@@ -18,7 +18,7 @@ class Hero(db.Model, SerializerMixin):
 
     # add relationship
     hero_powers = db.relationship('HeroPower', backref='hero')
-    # add serialization rules
+    # add serialization rule
     serialize_rules = ('-hero_powers.hero')
     def __repr__(self):
         return f'<Hero {self.id}>'

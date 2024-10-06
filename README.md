@@ -18,7 +18,6 @@ The Superheroes Management System is a Flask-based web application that provides
 - *Python 3.8 or higher*
 - *Flask*
 - *SQLAlchemy*
-- *Pytest*
 - *Faker*
 
 ## Steps to Install
